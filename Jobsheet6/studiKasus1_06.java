@@ -4,7 +4,7 @@ public class studiKasus1_06 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        int hargaPerCup = 18000;
+        int hargaPerCup = 17000;
         int jumlahCup, uangBayar;
         int totalHarga, diskon, totalBayar;
         int kembalian, kurang;
