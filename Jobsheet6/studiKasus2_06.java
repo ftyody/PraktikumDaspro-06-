@@ -23,6 +23,6 @@ public class studiKasus2_06 {
             }
         } 
         
-        input.close();
+        
     }
 }
