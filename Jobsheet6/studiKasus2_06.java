@@ -51,6 +51,6 @@ public class studiKasus2_06 {
             System.out.println("Mahasiswa: " + nama);
             System.out.println("Status: Tidak berhak menerima dana penghargaan karena " + alasan + ".");
         }
-        input.close();
+        input.close(); 
     }
 }
