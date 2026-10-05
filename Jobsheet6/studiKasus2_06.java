@@ -21,8 +21,36 @@ public class studiKasus2_06 {
             } else {
                 alasan = "bukan peraih Juara 1, 2, atau 3";
             }
-        } 
-        
-        
+        } else if (jenis.equalsIgnoreCase("PKM")) {
+            System.out.print("Status pendanaan PKM (1 = lolos, 0 = tidak lolos): ");
+            int pendanaan = input.nextInt();
+            if (pendanaan == 1) {
+                memenuhiSyarat = true;
+                alasan = "tim lolos pendanaan PKM";
+            } else {
+                alasan = "tim tidak lolos pendanaan PKM";
+            }
+        } else {
+            alasan = "kegiatan lainnya tidak memperoleh dana penghargaan";
+        }
+
+        if (memenuhiSyarat) {
+            System.out.print("Jumlah dokumen yang diupload (0-4): ");
+            int dokumen = input.nextInt();
+            if (dokumen == 4) {
+                System.out.println("Mahasiswa: " + nama);
+                System.out.println("Status: Berhak menerima dana penghargaan karena " + alasan +
+                        " dan seluruh dokumen lengkap.");
+            } else {
+                System.out.println("Mahasiswa: " + nama);
+                System.out.println("Status: Tidak berhak menerima dana penghargaan karena " + alasan +
+                        ", dokumen tidak lengkap.");
+                System.out.println("Jumlah dokumen yang masih kurang: " + (4 - dokumen));
+            }
+        } else {
+            System.out.println("Mahasiswa: " + nama);
+            System.out.println("Status: Tidak berhak menerima dana penghargaan karena " + alasan + ".");
+        }
+        input.close();
     }
 }
